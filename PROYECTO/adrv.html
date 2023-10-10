@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???????????</title>
+    <style>
+        body {
+            background-image: url('https://hips.hearstapps.com/hmg-prod/images/elemental-1662973129.jpg'); /* Imagen de fondo inicial */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #ff0000; /* Color de fondo del botón */
+            color: rgb(255, 255, 255); /* Color del texto del botón */
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #00ff2a; /* Cambiar el color de fondo al pasar el mouse */
+        }
+        #mensajeAmor {
+            display: none; /* Inicialmente oculto */
+            text-align: center;
+        }
+        #mensajeTexto {
+            font-size: 36px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* CSS adicional para dispositivos móviles */
+        @media (max-width: 375px) {
+            body {
+                background-size: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="botonTeAmo">¡ Hola haz clic aquí!</button>
+    <div id="mensajeAmor">
+        <div id="mensajeTexto">APESAR QUE NO SOMOS IGUALES Y TENEMOS MUCHAS CARACTERISTICAS DIFERENTES CONECTAMOS COMO AMBER Y WADE EN ELEMENTAL, TE AMO MUCHO MI AMOR💗</div>
+    </div>
+    <script>
+        // JavaScript para mostrar el mensaje y cambiar el fondo al hacer clic en el mensaje
+        const botonTeAmo = document.getElementById('botonTeAmo');
+        const mensajeAmor = document.getElementById('mensajeAmor');
+        const mensajeTexto = document.getElementById('mensajeTexto'); // Agregado para cambiar el color
+
+        botonTeAmo.addEventListener('click', function() {
+            // Cambiar el fondo a la segunda imagen al hacer clic en el mensaje
+            document.body.style.backgroundImage = "url('https://www.slashfilm.com/img/gallery/pixars-elemental-passes-300-million-at-the-global-box-office-in-major-reversal-of-fortune/intro-1689615840.jpg')";
+            // Ocultar el botón
+            botonTeAmo.style.display = 'none';
+            // Mostrar el mensaje de amor
+            mensajeAmor.style.display = 'block';
+            // Cambiar el color del texto a blanco
+            mensajeTexto.style.color = 'white'; // Agregado para cambiar el color
+        });
+    </script>
+</body>
+</html>
